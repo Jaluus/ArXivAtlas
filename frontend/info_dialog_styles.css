@@ -1,0 +1,210 @@
+dialog {
+  box-sizing: border-box;
+  z-index: 1000;
+  border: unset;
+  background: #323232;
+  color: white;
+  padding: 1em;
+  border-radius: 0.5em;
+  width: 50vw;
+  max-height: 70vh;
+  max-width: 80vh;
+  overflow-x: auto;
+  @media (max-width: 768px) {
+    position: fixed;
+    padding: 1em;
+    height: 80vh;
+    max-height: 80vh;
+    width: 100vw;
+    max-width: 100vw;
+    margin-bottom: 0;
+  }
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(5px);
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.dialog-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.dialog-close-button {
+  border: unset;
+  background: transparent;
+  cursor: pointer;
+}
+.dialog-close-button:focus {
+  outline: none;
+}
+
+.dialog-pie-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dialog-pie {
+  width: 50%;
+  @media (max-width: 768px) {
+    width: 70%;
+  }
+}
+
+.dialog-section-title {
+  font-size: x-large;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.dialog-paragraph-heading {
+  /* font-weight: bold; */
+  line-height: 2em;
+  color: #a2a2a2;
+}
+
+.dialog-paragraph {
+  background: #222222;
+  padding: 1em;
+  padding-top: 0.5em;
+  box-sizing: border-box;
+  border-radius: 0.5em;
+  flex: 1 1 auto;
+}
+
+.dialog-flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.dialog-author-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  max-height: 6em;
+  overflow-y: auto;
+}
+
+.dialog-author {
+  background: #121212;
+  padding: 0.5em;
+  box-sizing: border-box;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.dialog-main-author {
+  background: #424242;
+  padding: 0.5em;
+  box-sizing: border-box;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.recommended-paper-card {
+  box-sizing: border-box;
+  background: #222222;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.5em;
+}
+
+.recommended-paper-card .item-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recommended-paper-card .indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #121212;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  padding-top: 0.35em;
+  user-select: none;
+  pointer-events: none;
+}
+
+.inline-link {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.recommended-paper-card .indicator .svg-image {
+  height: 1em;
+  padding: 0;
+  padding-left: 0.25em;
+}
+
+.recommended-paper-card .title {
+  padding: 0.5em;
+}
+
+.dialog-button-section {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1em;
+}
+
+.dialog-button {
+  background: #222222;
+  border: unset;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+}
+.dialog-button:hover {
+  background: #121212;
+}
+
+.settings-button {
+  z-index: 1001;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #222222;
+  border: unset;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  margin: 1em;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  @media (max-width: 768px) {
+    top: 0;
+    margin: 0.5em;
+    bottom: unset;
+  }
+}
+
+.settings-button-text {
+  display: inline-block;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.settings-button:hover {
+  background: #323232;
+}

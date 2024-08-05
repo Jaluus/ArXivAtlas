@@ -1,0 +1,9 @@
+frontend/data/
+backend/data/
+archive/
+.vscode/
+slurm/
+__pycache__
+api_key
+
+.env

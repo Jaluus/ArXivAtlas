@@ -1,0 +1,11 @@
+numpy
+matplotlib
+openai
+cohere
+chromadb
+pandas
+beautifulsoup4
+brotli
+torch
+fastapi
+fastapi-cors
