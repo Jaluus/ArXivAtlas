@@ -52,28 +52,26 @@ const handleFunctionSelection = (state) => {
   } else if (state.active_map.dialog_fkt === "arxiv") {
     state.InfoModalUpdateFkt = updateInfoModal;
   } else {
-    alert(`Unknown map type ${map_type}`);
-    throw new Error(`Unknown map type ${map_type}`);
+    alert(`Unknown map type ${state.active_map.dialog_fkt}`);
+    throw new Error(`Unknown map type ${state.active_map.dialog_fkt}`);
   }
 
   if (state.active_map.display_fkt === "dpg") {
     state.PaperDisplayUpdateFkt = updatePaperDisplayDPG;
-  }
-  if (state.active_map.display_fkt === "arxiv") {
+  } else if (state.active_map.display_fkt === "arxiv") {
     state.PaperDisplayUpdateFkt = updatePaperDisplay;
   } else {
-    alert(`Unknown map type ${map_type}`);
-    throw new Error(`Unknown map type ${map_type}`);
+    alert(`Unknown map type ${state.active_map.display_fkt}`);
+    throw new Error(`Unknown map type ${state.active_map.display_fkt}`);
   }
 
   if (state.active_map.annotation_fkt === "dpg") {
     state.AnnotationUpdateFkt = drawAnnotationDPG;
-  }
-  if (state.active_map.annotation_fkt === "arxiv") {
+  } else if (state.active_map.annotation_fkt === "arxiv") {
     state.AnnotationUpdateFkt = drawAnnotation;
   } else {
-    alert(`Unknown map type ${map_type}`);
-    throw new Error(`Unknown map type ${map_type}`);
+    alert(`Unknown map type ${state.active_map.annotation_fkt}`);
+    throw new Error(`Unknown map type ${state.active_map.annotation_fkt}`);
   }
 
   if (state.active_map.parse_fkt === "dpg") {
@@ -81,8 +79,8 @@ const handleFunctionSelection = (state) => {
   } else if (state.active_map.parse_fkt === "arxiv") {
     state.DataParseFkt = parseData;
   } else {
-    alert(`Unknown map type ${map_type}`);
-    throw new Error(`Unknown map type ${map_type}`);
+    alert(`Unknown map type ${state.active_map.parse_fkt}`);
+    throw new Error(`Unknown map type ${state.active_map.parse_fkt}`);
   }
 };
 
