@@ -30,6 +30,14 @@ const updateDisplayedData = ({ state, point_container }) => {
     let is_in_category = cats.has(datum.category) || cats.size == 0;
     let is_in_year = datum.date >= min_date && datum.date <= max_date;
 
+    if (
+      datum.data === undefined ||
+      datum.data === null ||
+      datum.data === false
+    ) {
+      is_in_year = true;
+    }
+
     if (is_in_category && is_in_year) {
       displayed_data.push(datum);
     }
